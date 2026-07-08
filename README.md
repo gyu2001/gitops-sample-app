@@ -1,1 +1,0 @@
-# gitops-sample-app
