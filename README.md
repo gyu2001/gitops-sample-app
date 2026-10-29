@@ -54,6 +54,17 @@ ArgoCD가 담당합니다. (앱 레포와 배포 레포를 분리하는 GitOps �
 
 ---
 
+## 버전 관리
+
+- 이미지 태그: 커밋 SHA (`ghcr.io/gyu2001/gitops-sample-app:<SHA>`) — 어떤 커밋이 어떤 이미지로 배포됐는지 1:1로 추적
+- 릴리스 태그: 사람이 읽는 버전은 Git 태그(`v2.0.0`)로 함께 관리
+
+## 개선할 점
+
+- 빌드 전 테스트 단계 추가 (Dockerfile 검사, 컨테이너 기동 후 응답 확인)
+- 빌드가 끝나면 배포 레포에 이미지 태그 변경 PR을 자동으로 생성
+- 기능 브랜치와 PR 리뷰를 거쳐 main에 머지하도록 브랜치 보호 규칙 적용
+
 ## 관련 레포
 
 - 배포 매니페스트: [gitops-sample-manifest](https://github.com/gyu2001/gitops-sample-manifest)
